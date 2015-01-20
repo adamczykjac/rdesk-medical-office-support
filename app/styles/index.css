@@ -1,0 +1,14 @@
+/*-- Bootstrap CSS. -----------------------------------------*/
+
+@import "../../bower_components/bootstrap/dist/css/bootstrap.css";
+
+/*-- Drunken-Parrot CSS. -----------------------------------------*/
+
+@import "../vendor/drunken-parrot-flat-ui-master/css/drunken-parrot.css";
+
+/*-- Font-Awesome CSS. -----------------------------------------*/
+
+@import "../../bower_components/fontawesome/css/font-awesome.css";
+
+
+/*-- Application stylesheets. -----------------------------------------------*/
