@@ -5,7 +5,10 @@ define(function(require, exports, module) {
   var backbone = require("backbone");
   var template = require("template");
   var bootstrap = require("bootstrap");
+  var radio = require("dp_radio");
   var createVisitTpl = require("template!createVisit");
+  var ObjSerializer = require("objectSerializer");
+
 
   var CreateVisitView = backbone.View.extend({
     el: '#main',
@@ -16,6 +19,15 @@ define(function(require, exports, module) {
 
     render: function() {
       this.$el.html(createVisitTpl());
+    },
+
+    events: {
+      'submit #visit-details-form': 'saveVisit'
+    },
+
+    saveVisit: function(e) {
+      console.log($(e.currentTarget).serializeObject());
+      return false;
     }
   });
 

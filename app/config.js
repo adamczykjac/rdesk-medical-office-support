@@ -6,7 +6,11 @@ require.config({
     "jquery": "../bower_components/jquery/dist/jquery",
     "backbone": "../bower_components/backbone/backbone",
     "bootstrap": "../bower_components/bootstrap/dist/js/bootstrap",
-    "views": "./js/views"
+    "dp_radio": "../app/vendor/drunken-parrot-flat-ui-master/js/radio",
+    "views": "./js/views",
+    "models": "./js/models",
+    "ajaxPrefilter": "./js/ajaxPrefilter",
+    "objectSerializer": "./js/objectSerializer",
   },
 
   deps: ["main"],
@@ -20,6 +24,16 @@ require.config({
   shim: {
     "bootstrap": {
       deps: ["jquery"]
-    }
+    },
+    /* Drunken-Parrot UI Kit Radio button edited */
+    "dp_radio": {
+      deps: ["jquery"]
+    },
+    "ajaxPrefilter": {
+      deps: ["jquery"]
+    },
+    "objectSerializer": {
+      deps: ["jquery"]
+    },
   }
 });

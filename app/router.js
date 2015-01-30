@@ -4,6 +4,7 @@ define(function(require, exports, module) {
   // External dependencies.
   var Backbone = require("backbone");
   var HeaderView = require("views/header");
+  var FooterView = require("views/footer");
   var VisitListView = require("views/visitList");
   var CreateVisitView = require("views/createVisit");
 
@@ -17,6 +18,9 @@ define(function(require, exports, module) {
     setup: function() {
       if(!this.headerView) {
         this.headerView = new HeaderView();
+      }
+      if(!this.footerView) {
+        this.footerView = new FooterView();
       }
     },
 

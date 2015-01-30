@@ -4,7 +4,8 @@ define(function(require, exports, module) {
   // External dependencies.
   var backbone = require("backbone");
   var template = require("template");
-  var bootstrap = require("bootstrap");
+  var Visit = require("models/visit").VisitModel;
+  var Visits = require("models/visit").VisitCollection;
   var visitListTpl = require("template!visitList");
 
   var VisitListView = backbone.View.extend({
@@ -16,6 +17,15 @@ define(function(require, exports, module) {
 
     render: function() {
       this.$el.html(visitListTpl());
+      var visits = new Visits();
+      visits.fetch({
+        success: function (_visits) {
+          console.log(_visits.models);
+        },
+        error: function (err) {
+          console.log(err);
+        }
+      });
     }
   });
 
